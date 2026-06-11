@@ -7,7 +7,7 @@ function LotteryPage() {
   const [loading, setLoading] = useState(true);
   const [form, setForm] = useState({ name: '', propertyType: 'EWS', regAmt: '5000' });
 
-  // 1. Fetch Applicants from Backend Server on Load
+ 
   useEffect(() => {
     const fetchApplicants = async () => {
       try {
@@ -30,7 +30,7 @@ function LotteryPage() {
     setForm({ ...form, propertyType: type, regAmt: amt });
   };
 
-  // 2. Submit New Applicant to Backend Server
+ 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!form.name) return alert("Kripya Applicant ka naam dalein!");
@@ -41,10 +41,10 @@ function LotteryPage() {
         type: form.propertyType
       };
       
-      // Post request to backend API
+    
       const response = await axios.post('http://localhost:5000/api/applicants', payload);
       
-      // Update state instantly with server response
+     
       setApplicants([response.data, ...applicants]);
       setForm({ name: '', propertyType: 'EWS', regAmt: '5000' });
       alert(`🎉 Application Saved on Server! Generated Prop ID: ${response.data.propertyId}`);
