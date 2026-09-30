@@ -12,7 +12,7 @@ function FcfsPage() {
     e.preventDefault();
     if (!form.name) return alert("Kripya Applicant ka naam dalein!");
 
-    // FCFS Rule: Instant timestamp generation for proof of priority
+    
     const currentTime = new Date().toLocaleTimeString();
 
     const newAllotment = {
@@ -30,7 +30,7 @@ function FcfsPage() {
 
   return (
     <div className="space-y-6 animate-fade-in">
-      {/* BANNER */}
+      
       <div className="bg-gradient-to-r from-cyan-600 to-blue-500 text-white p-6 rounded-2xl shadow-md flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="p-3 bg-white/10 rounded-xl">
@@ -44,7 +44,7 @@ function FcfsPage() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* INPUT FORM */}
+      
         <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
           <h3 className="font-extrabold text-slate-800 mb-5 flex items-center gap-2 text-sm uppercase tracking-wide">
             <PlusCircle className="text-cyan-500 h-5 w-5" /> Instant Booking Form
