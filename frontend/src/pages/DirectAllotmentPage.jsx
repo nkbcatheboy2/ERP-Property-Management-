@@ -98,7 +98,6 @@ function DirectAllotmentPage() {
           </form>
         </div>
 
-        {/* RECODS TABLE */}
         <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 lg:col-span-2">
           <h3 className="font-extrabold text-slate-800 mb-5 text-sm uppercase tracking-wide">Direct Allotment Registry</h3>
           <div className="overflow-x-auto">
